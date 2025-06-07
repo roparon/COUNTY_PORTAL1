@@ -1,54 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wonders of the World</title>
   <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --card-bg: white;
+      --highlight: #3498db;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f4f4f4;
+      --card-bg: #2a2a2a;
+      --highlight: #e67e22;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
     }
 
     header {
-      background: #2c3e50;
+      background: var(--highlight);
       color: #fff;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 3rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background: #2c3e50;
+      padding: 0.5rem 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h2 {
+      color: white;
       margin: 0;
     }
 
-    .intro {
-      padding: 2rem;
-      text-align: center;
+    .toggle-btn {
       background: #ecf0f1;
+      padding: 0.4rem 0.7rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
-    .intro p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.2rem;
+    .search-bar {
+      padding: 0.5rem;
+      width: 200px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .intro {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .wonders-section {
+      padding: 1rem 2rem;
+    }
+
+    .wonders-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--highlight);
+      display: inline-block;
     }
 
     .wonders {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
+      gap: 1.5rem;
     }
 
     .wonder-card {
-      background: white;
+      background: var(--card-bg);
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
 
@@ -62,12 +103,11 @@
       object-fit: cover;
     }
 
-    .wonder-card h2 {
+    .wonder-card h3 {
       margin: 0;
-      padding: 1rem;
-      background: #3498db;
+      background: var(--highlight);
       color: white;
-      font-size: 1.5rem;
+      padding: 0.7rem;
     }
 
     .wonder-card p {
@@ -76,7 +116,7 @@
 
     footer {
       background: #2c3e50;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
@@ -85,79 +125,88 @@
 </head>
 <body>
 
-<header>
-  <h1>Wonders of the World</h1>
-</header>
+  <nav>
+    <h2>🌍 Wonders Portal</h2>
+    <div>
+      <input type="text" class="search-bar" placeholder="Search wonders..." />
+      <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+    </div>
+  </nav>
 
-<section class="intro">
-  <p>
-    The world is filled with breathtaking wonders that span history, nature, and engineering. Explore these magnificent places that showcase the brilliance of nature and human creativity.
-  </p>
-</section>
+  <header>
+    <h1>Wonders of the World</h1>
+    <p>Explore Earth's most awe-inspiring places</p>
+  </header>
 
-<section class="wonders">
-
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Wall_of_China_July_2006.JPG" alt="Great Wall of China">
-    <h2>Great Wall of China</h2>
+  <section class="intro">
     <p>
-      Stretching over 13,000 miles, this ancient fortification is a symbol of China’s strength and perseverance. Built over centuries, it is visible from space and remains one of the greatest feats of engineering.
+      From ancient monuments to breathtaking natural formations, discover the most remarkable creations and landscapes on our planet.
     </p>
-  </div>
+  </section>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu">
-    <h2>Machu Picchu, Peru</h2>
-    <p>
-      Perched high in the Andes Mountains, Machu Picchu is a mysterious Incan city built in the 15th century. Its intricate stone structures and panoramic views captivate millions each year.
-    </p>
-  </div>
+  <!-- Man-made Wonders -->
+  <section class="wonders-section">
+    <h2>Man-Made Wonders</h2>
+    <div class="wonders">
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Wall_of_China_July_2006.JPG" alt="Great Wall of China" />
+        <h3>Great Wall of China</h3>
+        <p>Spanning 13,000 miles, it stands as a symbol of ancient Chinese strength and unity.</p>
+      </div>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Christ_on_Corcovado_mountain.JPG" alt="Christ the Redeemer">
-    <h2>Christ the Redeemer, Brazil</h2>
-    <p>
-      Overlooking Rio de Janeiro, this 98-foot tall statue stands with open arms, symbolizing peace. It has become an icon of Brazil and a marvel of 20th-century engineering.
-    </p>
-  </div>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu" />
+        <h3>Machu Picchu</h3>
+        <p>The Lost City of the Incas, resting high in the Peruvian Andes, remains an architectural marvel.</p>
+      </div>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Petra_Jordan_BW_21.JPG" alt="Petra">
-    <h2>Petra, Jordan</h2>
-    <p>
-      Carved into rose-red cliffs, Petra was a thriving trading city and the capital of the Nabataean Empire. Its majestic Treasury and hidden tombs continue to awe visitors.
-    </p>
-  </div>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Colosseum" />
+        <h3>Colosseum</h3>
+        <p>This Roman amphitheater once held 50,000 spectators in awe during gladiator battles.</p>
+      </div>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Chichen_Itza_3.jpg" alt="Chichen Itza">
-    <h2>Chichen Itza, Mexico</h2>
-    <p>
-      A center of Mayan civilization, Chichen Itza’s step pyramid — El Castillo — is an astronomical wonder aligned with the sun during equinoxes.
-    </p>
-  </div>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal" />
+        <h3>Taj Mahal</h3>
+        <p>A monument of love built from white marble that glows under moonlight.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal">
-    <h2>Taj Mahal, India</h2>
-    <p>
-      A white marble mausoleum built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal. It’s a masterpiece of Mughal architecture and eternal love.
-    </p>
-  </div>
+  <!-- Natural Wonders -->
+  <section class="wonders-section">
+    <h2>Natural Wonders</h2>
+    <div class="wonders">
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Grand_canyon_horseshoe_bend.jpg" alt="Grand Canyon" />
+        <h3>Grand Canyon</h3>
+        <p>Carved by the Colorado River, it's a mile-deep showcase of Earth's geological history.</p>
+      </div>
 
-  <div class="wonder-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Colosseum">
-    <h2>Colosseum, Italy</h2>
-    <p>
-      The Colosseum in Rome is the largest ancient amphitheater ever built. It hosted gladiator battles and public spectacles for over 50,000 spectators.
-    </p>
-  </div>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Northern_Lights_in_Iceland.jpg" alt="Northern Lights" />
+        <h3>Northern Lights</h3>
+        <p>A dazzling natural light show visible in the polar skies, caused by solar particles.</p>
+      </div>
 
-</section>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg" alt="Mount Everest" />
+        <h3>Mount Everest</h3>
+        <p>The world’s highest mountain, towering at 8,848 meters above sea level.</p>
+      </div>
 
-<footer>
-  <p>&copy; 2025 Wonders of the World. Designed by Aaron Rop.</p>
-</footer>
+      <div class="wonder-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Victoria_Falls_-_Zambia-Zimbabwe.jpg" alt="Victoria Falls" />
+        <h3>Victoria Falls</h3>
+        <p>“The Smoke That Thunders” – a massive curtain of water between Zambia and Zimbabwe.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wonders of the World | Built by Aaron Rop</p>
+  </footer>
 
 </body>
 </html>
