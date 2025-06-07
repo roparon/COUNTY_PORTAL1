@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wonders of the World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .intro {
+      padding: 2rem;
+      text-align: center;
+      background: #ecf0f1;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+
+    .wonders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .wonder-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .wonder-card:hover {
+      transform: scale(1.02);
+    }
+
+    .wonder-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .wonder-card h2 {
+      margin: 0;
+      padding: 1rem;
+      background: #3498db;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .wonder-card p {
+      padding: 1rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Wonders of the World</h1>
+</header>
+
+<section class="intro">
+  <p>
+    The world is filled with breathtaking wonders that span history, nature, and engineering. Explore these magnificent places that showcase the brilliance of nature and human creativity.
+  </p>
+</section>
+
+<section class="wonders">
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Wall_of_China_July_2006.JPG" alt="Great Wall of China">
+    <h2>Great Wall of China</h2>
+    <p>
+      Stretching over 13,000 miles, this ancient fortification is a symbol of China’s strength and perseverance. Built over centuries, it is visible from space and remains one of the greatest feats of engineering.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu">
+    <h2>Machu Picchu, Peru</h2>
+    <p>
+      Perched high in the Andes Mountains, Machu Picchu is a mysterious Incan city built in the 15th century. Its intricate stone structures and panoramic views captivate millions each year.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Christ_on_Corcovado_mountain.JPG" alt="Christ the Redeemer">
+    <h2>Christ the Redeemer, Brazil</h2>
+    <p>
+      Overlooking Rio de Janeiro, this 98-foot tall statue stands with open arms, symbolizing peace. It has become an icon of Brazil and a marvel of 20th-century engineering.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Petra_Jordan_BW_21.JPG" alt="Petra">
+    <h2>Petra, Jordan</h2>
+    <p>
+      Carved into rose-red cliffs, Petra was a thriving trading city and the capital of the Nabataean Empire. Its majestic Treasury and hidden tombs continue to awe visitors.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Chichen_Itza_3.jpg" alt="Chichen Itza">
+    <h2>Chichen Itza, Mexico</h2>
+    <p>
+      A center of Mayan civilization, Chichen Itza’s step pyramid — El Castillo — is an astronomical wonder aligned with the sun during equinoxes.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal">
+    <h2>Taj Mahal, India</h2>
+    <p>
+      A white marble mausoleum built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal. It’s a masterpiece of Mughal architecture and eternal love.
+    </p>
+  </div>
+
+  <div class="wonder-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Colosseum">
+    <h2>Colosseum, Italy</h2>
+    <p>
+      The Colosseum in Rome is the largest ancient amphitheater ever built. It hosted gladiator battles and public spectacles for over 50,000 spectators.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 Wonders of the World. Designed by Aaron Rop.</p>
+</footer>
+
+</body>
+</html>
