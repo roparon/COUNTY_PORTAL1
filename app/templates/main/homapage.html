@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Dubai - The City of Gold</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Dubai_Marina_skyline_2020.jpg') no-repeat center center/cover;
+      height: 90vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.7rem 1.5rem;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1e3d59;
+      border-left: 5px solid #f9a825;
+      padding-left: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .streets ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    .streets li {
+      margin-bottom: 0.7rem;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .gallery-item h3 {
+      padding: 1rem;
+      background: #f9a825;
+      color: white;
+    }
+
+    .gallery-item p {
+      padding: 1rem;
+    }
+
+    footer {
+      background: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Dubai</h1>
+    <p>The City of Gold — Where Dreams Touch the Sky</p>
+  </header>
+
+  <section class="intro">
+    <h2 class="section-title">Discover Dubai</h2>
+    <p>Dubai is the crown jewel of the United Arab Emirates, a city that embodies futuristic innovation, luxury, and rich cultural heritage. Known for its towering skyscrapers, vibrant nightlife, gold souks, and desert adventures, Dubai welcomes millions of visitors each year who come to witness its wonders.</p>
+  </section>
+
+  <section class="streets">
+    <h2 class="section-title">Famous Streets in Dubai</h2>
+    <ul>
+      <li>Sheikh Zayed Road – Dubai's main artery, lined with skyscrapers</li>
+      <li>Al Rigga Street – Heart of Deira, known for traditional markets</li>
+      <li>Jumeirah Beach Road – Scenic route along the coast</li>
+      <li>Al Fahidi Street – Full of electronics, old souks and culture</li>
+      <li>City Walk Street – Pedestrian paradise with cafes and street art</li>
+    </ul>
+  </section>
+
+  <section class="map">
+    <h2 class="section-title">Interactive Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115770.8930389647!2d55.15717631733217!3d25.076381063356448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f434c4cb03b8b%3A0x6fc3c2b2f4f38baf!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2ske!4v1717776950649!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="gallery">
+    <h2 class="section-title">Top Attractions</h2>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Burj_Khalifa.jpg" alt="Burj Khalifa">
+      <h3>Burj Khalifa</h3>
+      <p>The tallest building in the world, soaring at 828 meters, with stunning views from the observation deck.</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Burj_Al_Arab_2016.jpg" alt="Burj Al Arab">
+      <h3>Burj Al Arab</h3>
+      <p>The iconic sail-shaped hotel symbolizing ultimate luxury and exclusivity along the Jumeirah coast.</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/The_Dubai_Mall_-_Dubai.jpg" alt="Dubai Mall">
+      <h3>Dubai Mall</h3>
+      <p>One of the world’s largest shopping malls featuring over 1,200 shops, an aquarium, and an indoor ice rink.</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Palm_Jumeirah.jpg" alt="Palm Jumeirah">
+      <h3>Palm Jumeirah</h3>
+      <p>A man-made palm-shaped island, home to luxury resorts, beaches, and residential towers.</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Dubai_Marina_Overview.jpg" alt="Dubai Marina">
+      <h3>Dubai Marina</h3>
+      <p>Ultra-modern waterfront development with dazzling towers, yachts, and vibrant nightlife.</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Dubai_Desert_Safari.JPG" alt="Desert Safari">
+      <h3>Desert Safari</h3>
+      <p>Thrilling rides through golden dunes, camel rides, and traditional Arabian entertainment under the stars.</p>
+    </div>
+  </section>
+
+</body>
+</html>
