@@ -19,7 +19,7 @@
                             <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show">                          
                                 <i class="fas fa-{{ 'exclamation-triangle' if category == 'error' else 'info-circle' }} me-2"></i>                            
                                 {{ message }}                                     
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>                                                       
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>                                                       
                             </div>                                                
                         {% endfor %}                                              
                     {% endif %}                                                   
