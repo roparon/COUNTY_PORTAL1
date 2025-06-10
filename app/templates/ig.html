@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nature Wonders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0fdf4;
+      color: #1a202c;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      max-width: 600px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 100, 0, 0.8);
+      padding: 0.8rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .forest, .ocean, .wildlife, .gallery {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2f855a;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer {
+      background: #22543d;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact input, .contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      background: #2f855a;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .contact button:hover {
+      background: #276749;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#forest">Forests</a>
+  <a href="#ocean">Oceans</a>
+  <a href="#wildlife">Wildlife</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>Nature Wonders</h1>
+  <p>Explore the breathtaking beauty of our natural world — forests, oceans, wildlife, and more.</p>
+</header>
+
+<section id="forest" class="forest">
+  <h2>Majestic Forests</h2>
+  <p>Forests cover about 31% of our planet's land area and are home to over 80% of the terrestrial species of animals, plants, and fungi. From the Amazon rainforest to the vast boreal forests of Siberia, they regulate our climate and provide essential resources.</p>
+  <p>Let's protect these green lungs of the Earth and ensure they thrive for generations to come.</p>
+</section>
+
+<section id="ocean" class="ocean">
+  <h2>Deep Blue Oceans</h2>
+  <p>Covering more than 70% of Earth’s surface, oceans regulate the climate, generate oxygen, and are teeming with life. Coral reefs, deep trenches, and mysterious marine species all reside within this vast blue expanse.</p>
+  <p>Every drop matters — let’s conserve our oceans and their creatures.</p>
+</section>
+
+<section id="wildlife" class="wildlife">
+  <h2>Incredible Wildlife</h2>
+  <p>From the majestic lions of Africa to the shy snow leopards of the Himalayas, wildlife reflects the beauty and complexity of nature. Each species plays a role in the ecosystem, balancing the web of life.</p>
+  <p>Protecting biodiversity means protecting ourselves.</p>
+</section>
+
+<section id="gallery" class="gallery">
+  <h2>Nature Gallery</h2>
+  <div class="gallery-grid">
+    <img src="https://source.unsplash.com/300x200/?forest" alt="Forest">
+    <img src="https://source.unsplash.com/300x200/?ocean" alt="Ocean">
+    <img src="https://source.unsplash.com/300x200/?wildlife" alt="Wildlife">
+    <img src="https://source.unsplash.com/300x200/?mountains" alt="Mountains">
+    <img src="https://source.unsplash.com/300x200/?river" alt="River">
+    <img src="https://source.unsplash.com/300x200/?nature" alt="Nature">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Do you love nature as much as we do? Let’s connect!</p>
+  <form>
+    <input type="text" placeholder="Your Name" required><br>
+    <input type="email" placeholder="Your Email" required><br>
+    <textarea rows="5" placeholder="Your Message"></textarea><br>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Nature Wonders. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
