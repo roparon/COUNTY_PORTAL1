@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_security import SQLAlchemyUserDatastore
 from app.extensions import db, migrate, mail, security, csrf
-from ..config import Config
+from app.config import Config
 import json
 
 def create_app():
