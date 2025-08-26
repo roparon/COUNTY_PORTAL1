@@ -1,6 +1,5 @@
 .env
 .county/
-config.py
 .github/
 # Ignore Python cache files
 __pycache__/
