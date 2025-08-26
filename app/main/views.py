@@ -12,7 +12,6 @@ import json
 
 main_bp = Blueprint('main_bp', __name__)
 
-
 @main_bp.route('/')                                                           
 def index():                                                                  
     """Home page - redirect based on authentication status"""                 
