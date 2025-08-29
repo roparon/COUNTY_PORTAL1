@@ -1,9 +1,9 @@
 services:
   app:
     build: .
-    env_file: .env
     environment:
-      DATABASE_URL: postgresql://roparon:securepassword@db:5432/county
+      DATABASE_URL: postgres://roparon:roparon@db:5432/county
+    env_file: .env
     depends_on:
       - db
     ports:
