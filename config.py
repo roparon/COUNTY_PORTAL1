@@ -27,10 +27,10 @@ class Config:
     SECURITY_TRACKABLE = True
     SECURITY_CHANGEABLE = True
     SECURITY_RECOVERABLE = True
-    SECURITY_SEND_PASSWORD_RESET_EMAIL = True   # Password reset instructions      
-    SECURITY_SEND_PASSWORD_CHANGE_EMAIL = True  # Password change notifications
-    SECURITY_EMAIL_HTML = True                  # Send HTML emails                 
-    SECURITY_EMAIL_PLAINTEXT = True             # Send plain text emails
+    SECURITY_SEND_PASSWORD_RESET_EMAIL = True    
+    SECURITY_SEND_PASSWORD_CHANGE_EMAIL = True
+    SECURITY_EMAIL_HTML = True                 
+    SECURITY_EMAIL_PLAINTEXT = True             
 
     # Custom email subjects
     SECURITY_EMAIL_SUBJECT_REGISTER = "Welcome to County Services Portal"
